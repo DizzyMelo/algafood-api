@@ -48,7 +48,7 @@ public class ConsultaCozinhaMain {
 		cozinha3.setId(4L);
 		cozinha3.setNome("Italiana");
 		
-		cozinha.remover(cozinha3);
+		cozinha.remover(cozinha3.getId() );
 		
 		List<Cozinha> cozinhas2 = cozinha.todas();
 		
