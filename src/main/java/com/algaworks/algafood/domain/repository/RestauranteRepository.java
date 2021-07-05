@@ -10,7 +10,8 @@ import org.springframework.data.repository.query.Param;
 
 import com.algaworks.algafood.domain.model.Restaurante;
 
-public interface RestauranteRepository extends JpaRepository<Restaurante, Long>{
+public interface RestauranteRepository 
+	extends JpaRepository<Restaurante, Long>, RestauranteRepositoryQueries{
 	
 	List<Restaurante> findByTaxaFreteBetween(BigDecimal taxaInicial, BigDecimal taxaFinal);
 	
@@ -26,6 +27,7 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Long>{
 	boolean existsByNome(String nome);
 	
 	int countByCozinhaId(Long cozinhaId);
+	
 	
 	
 //	List<Restaurante> listar();
