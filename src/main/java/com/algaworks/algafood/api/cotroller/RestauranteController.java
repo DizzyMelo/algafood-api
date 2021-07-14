@@ -70,7 +70,8 @@ public class RestauranteController {
 			Optional<Restaurante> restauranteAtual = repository.findById(restauranteId);
 			
 			if(restauranteAtual != null) {
-				BeanUtils.copyProperties(restaurante, restauranteAtual.get(), "id");
+				BeanUtils.copyProperties(restaurante, restauranteAtual.get(), 
+						"id", "formasPagamento", "endereco", "dataCadastro", "produtos");
 				
 				Restaurante restauranteNovo = service.adicionar(restauranteAtual.get());
 				
