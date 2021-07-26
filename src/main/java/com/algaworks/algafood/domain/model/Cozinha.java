@@ -11,8 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -32,6 +30,7 @@ public class Cozinha {
 //	 @JsonProperty("titulo")
 	@Column(nullable = false)
 	private String nome;
+	
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "cozinha")
